@@ -1,0 +1,9 @@
+1° Semana: Projeto base javafx feito, iniciado as primeiras pastas e arquivos java.
+Começamos os slides, discutimos sobre o projeto e pensamos em como implementa-lo.Projeto base javafx feito,
+
+2° Semana: Começamos o código base, tentando fazer commit (sem sucesso),
+discutimos andamento do projeto e continuação dos slides
+
+3° Semana: Arrumando problemas no código, organizando tabelas no My php admin, organizando a implementação da tela.
+
+4° Semana: Implementação feita, ainda com alguns erros, aguardando meet com a professora. Slides quase finalizados, só falta arrumar os erros do código.

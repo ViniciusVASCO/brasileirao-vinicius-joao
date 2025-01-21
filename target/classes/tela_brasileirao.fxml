@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vinicius.joao.controllers.TelaBrasileirao.Controller">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="409.0" prefWidth="600.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Pane prefHeight="77.0" prefWidth="600.0" style="-fx-background-color: #1E90FF;">
+               <children>
+                  <ImageView fitHeight="70.0" fitWidth="71.0" layoutX="20.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../184443_imgbank_.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="167.0" layoutY="23.0" text="Brasileirão da galera">
+                     <font>
+                        <Font name="Arial Bold Italic" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <TabPane layoutY="77.0" prefHeight="334.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="BotaoADDTabela" onSelectionChanged="#BotaoADDTabela" text="Tabela">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView prefHeight="305.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="POSIÇÃO" />
+                                  <TableColumn prefWidth="75.0" text="TIMES" />
+                                    <TableColumn prefWidth="75.0" text="PONTOS" />
+                                    <TableColumn prefWidth="75.0" text="JOGOS" />
+                                    <TableColumn prefWidth="75.0" text="VITÓRIAS" />
+                                    <TableColumn prefWidth="75.0" text="EMPATES" />
+                                    <TableColumn prefWidth="99.0" text="DERROTAS" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="BotaoADDTimesCadastrados" onSelectionChanged="#BotaoADDTimesCadastrados" text="Times">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView layoutX="-3.0" layoutY="36.0" prefHeight="270.0" prefWidth="607.0" />
+                              <TextField fx:id="BotaoADDPesquisarTime" layoutY="11.0" onAction="#BotaoADDPesquisarTime" promptText="Digite o nome do time" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="BotaoADDArtilheiros" onSelectionChanged="#BotaoADDArtilheiros" text="Artilheiros">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView prefHeight="303.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn prefWidth="200.0" text="JOGADOR" />
+                                  <TableColumn minWidth="50.0" prefWidth="200.0" text="GOLS" />
+                                    <TableColumn prefWidth="200.0" text="JOGO" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="BotaoADDCadastroTimes" onSelectionChanged="#BotaoADDCadastroTimes" text="Cadastrar Times">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="BotaoADDCadastrarNomeTime" layoutX="88.0" layoutY="60.0" onAction="#BotaoADDCadastrarNomeTime" prefHeight="32.0" prefWidth="149.0" promptText="Nome do time" />
+                              <TextField fx:id="BotaoADDCadastrarQuantidadeJogadores" layoutX="89.0" layoutY="157.0" onAction="#BotaoADDCadastrarQuantidadeJogadores" prefHeight="32.0" prefWidth="149.0" promptText="Quantidade de jogadores" />
+                              <DatePicker fx:id="BotaoADDCadastrarDataFundacao" layoutX="322.0" layoutY="110.0" onAction="#BotaoADDCadastrarDataFundacao" prefHeight="32.0" prefWidth="152.0" promptText="Data de fundação" />
+                              <TextField fx:id="BotaoADDCadastrarNomeEstadio" layoutX="323.0" layoutY="60.0" onAction="#BotaoADDCadastrarNomeEstadio" prefHeight="32.0" prefWidth="149.0" promptText="Nome do estádio" />
+                              <Button fx:id="BotaoADDCadastrarTime" layoutX="231.0" layoutY="212.0" mnemonicParsing="false" onAction="#BotaoADDCadastrarTime" text="Cadastrar time" />
+                              <Text layoutX="224.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre seu time!">
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="12.0" />
+                                 </font>
+                              </Text>
+                              <TextField layoutX="88.0" layoutY="110.0" prefHeight="31.0" prefWidth="150.0" promptText="Abreviação do time" />
+                              <TextField fx:id="BotaoADDCadastrarQuantidadeJogadores1" layoutX="323.0" layoutY="157.0" onAction="#BotaoADDCadastrarQuantidadeJogadores" prefHeight="32.0" prefWidth="150.0" promptText="Local de origem" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="BotaoADDCadastroJogos" onSelectionChanged="#BotaoADDCadastroJogos" text="Cadastrar Jogos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="BotaoADDCTimesJogaram" layoutX="31.0" layoutY="59.0" onAction="#BotaoADDCTimesJogaram" prefHeight="32.0" prefWidth="149.0" promptText="Times mandante" />
+                              <TextField fx:id="BotaoADDEstadio" layoutX="214.0" layoutY="59.0" onAction="#BotaoADDEstadio" prefHeight="32.0" prefWidth="149.0" promptText="Estádio" />
+                              <TextField fx:id="BotaoADDHorario" layoutX="400.0" layoutY="59.0" onAction="#BotaoADDHorario" prefHeight="32.0" prefWidth="149.0" promptText="Hoŕaio" />
+                              <TextField fx:id="BotaoADDPontuacao" layoutX="31.0" layoutY="117.0" onAction="#BotaoADDPontuacao" prefHeight="32.0" prefWidth="149.0" promptText="Time visitante" />
+                              <TextField fx:id="BotaoADDPosicao" layoutX="214.0" layoutY="117.0" onAction="#BotaoADDPosicao" prefHeight="32.0" prefWidth="149.0" promptText="Posição" />
+                              <DatePicker fx:id="BotaoADDData" layoutX="401.0" layoutY="117.0" onAction="#BotaoADDData" prefHeight="32.0" prefWidth="148.0" promptText="Data" />
+                              <Button fx:id="BotaoADDCadastrarJogo" layoutX="400.0" layoutY="168.0" mnemonicParsing="false" onAction="#BotaoADDCadastrarJogo" prefHeight="31.0" prefWidth="149.0" text="Cadastrar Jogo" />
+                              <Text layoutX="227.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre sua partida!">
+                                 <font>
+                                    <Font name="Arial Bold Italic" size="12.0" />
+                                 </font>
+                              </Text>
+                              <TextField layoutX="31.0" layoutY="168.0" prefHeight="31.0" prefWidth="149.0" promptText="Placar mandante" />
+                              <TextField layoutX="212.0" layoutY="168.0" prefHeight="31.0" prefWidth="149.0" promptText="Placar visitante" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
